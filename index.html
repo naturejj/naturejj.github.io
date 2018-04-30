@@ -15,11 +15,13 @@ if(document.referrer.substring(0,url.length)!=url){
             location.href = "/m";
 	    }
             break;
-        }
+        }else{
+	    if(navigator.userAgent.match('/m'){
+     	    location.href="/";   
+    	    }
+	}
     }
-    if(navigator.userAgent.match('/m'){
-     	location.href="/";   
-    }
+    
 }
 </script>
  </head>
