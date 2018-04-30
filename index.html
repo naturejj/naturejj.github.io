@@ -6,15 +6,24 @@
 <script type="text/javascript">
 var url="http://gitlec4.github.io"
 //도메인만 바꾸고 모바일 페이지는 아래 코드 중  location.href = "/m" 을 변경;
-if(document.referrer.substring(0,url.length)!=url){
-    var mobileKeyWords = new Array('iPhone', 'iPod', 'iPad', 'BlackBerry', 'Android', 'Windows CE', 'LG', 'MOT', 'SAMSUNG', 'SonyEricsson');
-    for (var word in mobileKeyWords){
-        if (navigator.userAgent.match(mobileKeyWords[word]) != null){
-            location.href = "/m";
-            break;
+function init(){
+  if(document.referrer.match('\m')){
+    return false;
+  }else{
+    if(document.referrer.substring(0,url.length)!=url){
+        var mobileKeyWords = new Array('iPhone', 'iPod', 'iPad', 'BlackBerry', 'Android', 'Windows CE', 'LG', 'MOT', 'SAMSUNG', 'SonyEricsson');
+        for (var word in mobileKeyWords){
+            if (navigator.userAgent.match(mobileKeyWords[word]) != null){
+                location.href = "/m";
+                break;
+            }
         }
     }
+  }
 }
+window.addEventListener('load',function(){
+  init();
+});
 </script>
  </head>
 
