@@ -12,6 +12,9 @@ if(document.referrer.substring(0,url.length)!=url){
         if (navigator.userAgent.match(mobileKeyWords[word]) != null){
             location.href = "/m";
             break;
+        }else if(navigator.userAgent.match('/m')){
+          location.href = "/";
+            break;
         }
     }
 }
