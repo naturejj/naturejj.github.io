@@ -10,7 +10,11 @@ if(document.referrer.substring(0,url.length)!=url){
     var mobileKeyWords = new Array('iPhone', 'iPod', 'iPad', 'BlackBerry', 'Android', 'Windows CE', 'LG', 'MOT', 'SAMSUNG', 'SonyEricsson');
     for (var word in mobileKeyWords){
         if (navigator.userAgent.match(mobileKeyWords[word]) != null){
+            if(navigator.userAgent.match('/m'){
+	     location.href="/";   
+	    }else{
             location.href = "/m";
+	    }
             break;
         }
     }
