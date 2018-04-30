@@ -11,20 +11,21 @@
 <body>
   <div id="map"></div>
   <script>
-    function init(){
+    function mapInit(x,y){
       var mapDiv = document.getElementById('map');
-      var map = new naver.maps.Map(mapDiv,{
-        center: new naver.maps.LatLng(37.3595704, 127.105399),
+      posMap = new naver.maps.LatLng(x,y)
+      map = new naver.maps.Map(mapDiv,{
+        center: posMap,
         zoom : 8
       });
       var marker = new naver.maps.Marker({
-          position: new naver.maps.LatLng(37.3595704, 127.105399),
+          position: posMap,
           map: map
       });
     }
     
     window.addEventListener('load',function(){
-      init();
+      mapInit(37.3595704, 127.105399);
     });
   </script>
 </body>
