@@ -12,10 +12,10 @@ a{text-decoration: none;color: inherit;}
 .ir{display: block;text-indent: -9999px;background-repeat: no-repeat;background-position: 50% 50%}
 .hidden{position: absolute;top: -9999px;left: -9999px;}
 
-.inner-ct{width: 1020px;margin: auto;}
+.inner-ct{margin: auto;padding:0 5% 60px;max-width: 1020px;width: 90%;}
 
 /* fonts */
-/*body{font-family: 'Nanum Barun Gothic', sans-serif,'돋움';color:#3a3a3a}*/
+body{font-family: sans-serif,'돋움';color:#3a3a3a}
 
 /* header */
 #header{height: 5em;}
@@ -29,7 +29,7 @@ a{text-decoration: none;color: inherit;}
 
 /* 섹션 공통 */
 .st{}
-.st .st-title{padding-top: 4em;}
+.st .st-title{padding: 3em 0 2em;color:#125106;font-size: 2em;text-align: center;}
 
 /* 섹션-비디오 */
 .st-video{}
@@ -39,24 +39,29 @@ a{text-decoration: none;color: inherit;}
 .name{color:#fff;font-size: 2.625em;font-weight: 900;}
 .job{color:#fff;font-size: 1.313em;font-weight: 900;}
 
-.profile{_margin-top: 6em;text-align: center;}
+.profile{text-align: center;margin-bottom: 3em;}
 .profile-box{overflow: hidden;margin: auto;width: 12em;height: 12em;border-radius: 50%}
 .profile-box>img{width: 100%;height: 100%;}
 
 .st-about{}
-.st-about .st-title{_padding-top: 12em;}
-.st-about .about-wrap{display: inline-block;}
-.st-about .about{float: left;}
+.st-about .st-title{}
+.st-about .about-wrap{}
+.st-about .about{float: left;width: 50%;}
+.st-about .about .tit{color:#8cb401;margin-bottom: 1em;font-size: 1.313em;}
 
-.st-skill{}
+.st-skill{background: url(../file/skills_bg.jpg);background-position: 50% 50%;}
 
-.gnb{}
 .gnb>ul{display: inline-block;}
 .gnb>ul>li{float: left;margin: 0 20px;}
-.gnb>ul>li>a{display: block;height: 80px;color: #fff;line-height: 80px;}
+.gnb>ul>li>a{display: block;height: 5em;color: #fff;line-height: 5em;}
 
 
 .bg-yellow{height: 5em;background-color: #e8d537;}
+
+.dl-list>dt{float: left;clear: both;margin-top: 12px;color:#777;width: 150px}
+.dl-list>dd{float: left;margin-top: 12px;color:#222}
+
+.caution{text-align: center;}
 
 /* PC */
 @media screen and (min-width:1025px){
@@ -66,11 +71,12 @@ a{text-decoration: none;color: inherit;}
 /* 태블릿 */
 @media screen and (max-width:1024px){
   .video-wrap>video{display: none;}
+  .gnb{display: none;}
+  .st-about .about{width: 100%;}
 }
 
 /* landscape */
 @media screen and (max-width:767px){
-  .inner-ct{width: 100%;}
 
 }
 
