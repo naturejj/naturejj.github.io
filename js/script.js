@@ -1,4 +1,47 @@
 jQuery(function($){
+  
+  var H=[0];
+  
+  function setSecHeight(){
+    var h = 0; 
+
+    $('section').each(function(i){
+      h+=$(this).height();
+      H[i+1] = h+200;
+      if(i==3){
+        H[i+1] -= 200;
+      }
+    });
+    
+  }
+  function move(i){
+    $(window).clearQueue().animate({scrollTop:H[i]},500,function(){
+      active(i);
+    });	
+  }
+  
+  function active(i){
+    $('.gnb>ul>li').removeClass('active').eq(i).addClass('active');
+  }
+  
+  function now(el){
+    var X;
+    var T = el.scrollTop();
+    console.log(T);
+
+    H.forEach(function(v,i){
+      if(T >= H[i] - 300){
+        X=i;
+      }else{
+        return false;
+      }
+    });
+
+    return X;
+  }
+  
+  setSecHeight();
+  
   $(window).on('resize',function(){
     vw=$('.video-wrap');
     vw.width($(this).width());
@@ -8,6 +51,8 @@ jQuery(function($){
   }).resize();
   
   $(window).on('scroll',function(){
+    
+    active(now($(this)));
     
     var H = $(this).scrollTop();
     
