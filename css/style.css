@@ -14,22 +14,26 @@ a{text-decoration: none;color: inherit;}
 
 .inner-ct{margin: auto;padding:0 5% 60px;max-width: 1020px;width: 90%;}
 
+html,body{height: 100%;}
 /* fonts */
 body{font-family: sans-serif,'돋움';color:#3a3a3a}
+
+.wrap{height: 100%;}
 
 /* header */
 #header{height: 5em;}
 #header.scroll{position: fixed;top: 0;left: 0;width: 100%;background-color: transparent;}
 #header.scroll-bg{background-color: #e8d537;}
+#header.scroll-bg .gnb>ul>li.active>a{color: #8cb401;}
 
 .logo{float: left;}
 
 /* container */
-#container{}
+#container{height: 100%;}
 
 /* 섹션 공통 */
 .st{}
-.st .st-title{padding: 3em 0 2em;color:#125106;font-size: 2em;text-align: center;}
+.st .st-title{padding-top: 4em;color:#125106;font-size: 2em;text-align: center;}
 
 /* 섹션-비디오 */
 .st-video{}
@@ -39,20 +43,23 @@ body{font-family: sans-serif,'돋움';color:#3a3a3a}
 .name{color:#fff;font-size: 2.625em;font-weight: 900;}
 .job{color:#fff;font-size: 1.313em;font-weight: 900;}
 
-.profile{text-align: center;margin-bottom: 3em;}
+.profile{text-align: center;margin: 3em 0 4em;}
 .profile-box{overflow: hidden;margin: auto;width: 12em;height: 12em;border-radius: 50%}
 .profile-box>img{width: 100%;height: 100%;}
 
-.st-about{}
+.st-about{height: 100%;}
 .st-about .st-title{}
 .st-about .about-wrap{}
 .st-about .about{float: left;width: 50%;}
 .st-about .about .tit{color:#8cb401;margin-bottom: 1em;font-size: 1.313em;}
 
 .st-skill{background: url(../file/skills_bg.jpg);background-position: 50% 50%;}
+.st-skill .st-title{color:#fff;}
+.st-skill .dl-list>dt{color:#fff;}
+.st-skill .dl-list>dd{color:#fff;}
 
 .gnb>ul{display: inline-block;}
-.gnb>ul>li{float: left;margin: 0 20px;}
+.gnb>ul>li{float: left;padding: 0 20px;}
 .gnb>ul>li>a{display: block;height: 5em;color: #fff;line-height: 5em;}
 
 
@@ -63,6 +70,11 @@ body{font-family: sans-serif,'돋움';color:#3a3a3a}
 
 .caution{text-align: center;}
 
+.pf-list{width: 30.3333%;margin: 20px 1.5%;float: left;}
+.pf-list .pf{border: 1px solid #000;}
+
+.st-cont{height: 100%;background-image: url(../file/contact_bg.jpg);background-size: cover;background-position: 50% 100%;}
+
 /* PC */
 @media screen and (min-width:1025px){
   
@@ -70,13 +82,14 @@ body{font-family: sans-serif,'돋움';color:#3a3a3a}
 
 /* 태블릿 */
 @media screen and (max-width:1024px){
+  body{font-size: 15px;}
   .video-wrap>video{display: none;}
   .gnb{display: none;}
-  .st-about .about{width: 100%;}
 }
 
 /* landscape */
 @media screen and (max-width:767px){
+  .st-about .about{width: 100%;}
 
 }
 
