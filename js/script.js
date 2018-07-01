@@ -1,5 +1,10 @@
 jQuery(function($){
   
+  /************************************************************************/
+  /* 전역변수, 함수 선언                                                    */
+  /************************************************************************/
+
+  T = $('#header').offset().top;
   var H=[0];
   
   function setSecHeight(){
@@ -14,20 +19,18 @@ jQuery(function($){
     });
     
   }
+  
   function move(i){
-    $(window).clearQueue().animate({scrollTop:H[i]},500,function(){
-      active(i);
-    });	
+    $('html, body').clearQueue().animate({scrollTop:H[i]-300},500);	
   }
   
   function active(i){
     $('.gnb>ul>li').removeClass('active').eq(i).addClass('active');
   }
   
-  function now(el){
+  function now(){
     var X;
-    var T = el.scrollTop();
-    console.log(T);
+    var T = $(window).scrollTop();
 
     H.forEach(function(v,i){
       if(T >= H[i] - 300){
@@ -39,8 +42,16 @@ jQuery(function($){
 
     return X;
   }
-  
+
+  /************************************************************************/
+  /* 페이지 로딩 시 초기세팅                                                 */
+  /************************************************************************/
+
   setSecHeight();
+  
+  /************************************************************************/
+  /* 이벤트 처리                                                            */
+  /************************************************************************/
   
   $(window).on('resize',function(){
     
@@ -49,19 +60,15 @@ jQuery(function($){
     vw=$('.video-wrap');
     vw.width($(this).width());
     vw.height($(this).height()); 
-    T = $('#header').offset().top;
-    vt = $(this).height();
+    vt = vw.height();
   }).resize();
   
-  $(window).on('scroll',function(){
+  $(window).on('mousewheel scroll',function(){
     
-    active(now($(this)));
+    active(now());
     
     var H = $(this).scrollTop();
     
-//    if(H>100) $('video').get(0).pause();
-//    else $('video').get(0).play();
-   
     if(H>T){
       $('#header').addClass('scroll');
       if(H>vt){
@@ -75,5 +82,10 @@ jQuery(function($){
     
   });
   
+  $('.gnb>ul>li>a').on('click',function(e){
+    e.preventDefault();
+    var n = $(this).parents('li').index();
+    move(n);
+  });
   
 });

@@ -24,7 +24,7 @@ body{font-family: sans-serif,'돋움';color:#3a3a3a}
 #header{height: 5em;}
 #header.scroll{position: fixed;top: 0;left: 0;width: 100%;background-color: transparent;}
 #header.scroll-bg{background-color: #e8d537;}
-#header.scroll-bg .gnb>ul>li.active>a{color: #8cb401;}
+#header.scroll-bg .gnb>ul>li.active>a{color: #5aa00c;font-weight: bold;}
 
 .logo{float: left;}
 
@@ -51,7 +51,7 @@ body{font-family: sans-serif,'돋움';color:#3a3a3a}
 .st-about .st-title{}
 .st-about .about-wrap{}
 .st-about .about{float: left;width: 50%;}
-.st-about .about .tit{color:#8cb401;margin-bottom: 1em;font-size: 1.313em;}
+.st-about .about .tit{color:#5aa00c;margin-bottom: 1em;font-size: 1.313em;}
 
 .st-skill{background: url(../file/skills_bg.jpg);background-position: 50% 50%;}
 .st-skill .st-title{color:#fff;}
