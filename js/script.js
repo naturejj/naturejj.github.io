@@ -43,6 +43,9 @@ jQuery(function($){
   setSecHeight();
   
   $(window).on('resize',function(){
+    
+    setSecHeight();
+    
     vw=$('.video-wrap');
     vw.width($(this).width());
     vw.height($(this).height()); 
