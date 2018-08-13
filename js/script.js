@@ -21,7 +21,11 @@ jQuery(function($){
   }
   
   function move(i){
-    $('html, body').clearQueue().animate({scrollTop:H[i]-300},500);	
+    if(i!=4){
+      $('html, body').clearQueue().animate({scrollTop:H[i]-300},500);	
+    }else{
+      $('html, body').clearQueue().animate({scrollTop:H[i]},500);	
+    }
   }
   
   function active(i){
@@ -33,7 +37,7 @@ jQuery(function($){
     var T = $(window).scrollTop();
 
     H.forEach(function(v,i){
-      if(T >= H[i] - 300){
+      if(T >= H[i] - 400){
         X=i;
       }else{
         return false;
