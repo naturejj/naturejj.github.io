@@ -92,12 +92,12 @@ section .ctt_section {margin: 120px auto 0;}
 #portfolio .caution {margin-top: 60px; display: block; color: #8cb401; text-align: center;}
 #portfolio .ctt_section {overflow: hidden; height: 600px;}
 #portfolio .ctt_section ul {width: 100%; height: 600px;}
-#portfolio .ctt_section ul li {padding: 0 1.6%; width: 33.33%;}
-#portfolio .ctt_section ul li .pf {margin-top: 200px; opacity: 0;}
-#portfolio.on .ctt_section ul li .pf {margin-top: 0; opacity: 1; transition: opacity 0.8s, margin-top 0.8s;}
-#portfolio .ctt_section ul li #pf1 {transition: opacity 0.8s 0s, margin-top 0.8s 0s;}
-#portfolio .ctt_section ul li #pf2 {transition: opacity 0.8s 0.1s, margin-top 0.8s 0.1s;}
-#portfolio .ctt_section ul li #pf3 {transition: opacity 0.8s 0.2s, margin-top 0.8s 0.2s;}
+#portfolio .ctt_section ul .pf-li {float: left;padding: 0 1.6%; width: 33.33%;}
+#portfolio .ctt_section ul .pf-li .pf {margin-top: 200px; opacity: 0;}
+#portfolio.on .ctt_section ul .pf-li .pf {margin-top: 0; opacity: 1; transition: opacity 0.8s, margin-top 0.8s;}
+#portfolio .ctt_section ul .pf-li #pf1 {transition: opacity 0.8s 0s, margin-top 0.8s 0s;}
+#portfolio .ctt_section ul .pf-li #pf2 {transition: opacity 0.8s 0.1s, margin-top 0.8s 0.1s;}
+#portfolio .ctt_section ul .pf-li #pf3 {transition: opacity 0.8s 0.2s, margin-top 0.8s 0.2s;}
 #portfolio .pf .thumb {overflow: hidden; position: relative; width: 100%; height: 0; padding-top: 75%; background-color: #f0f0f0;}
 #portfolio .pf .thumb img {position: absolute; top: 0; bottom: 0; left: 0; right: 0; width: 100%;}
 #portfolio .pf .thumb .thumb_more {display: none; position: absolute; top: 0; bottom: 0; left: 0; right: 0; background-color: rgba(0,0,0,0.5);}
@@ -113,9 +113,9 @@ section .ctt_section {margin: 120px auto 0;}
 #portfolio .pf .pf_btn a .hover_icon {width: 100%; height: 40px; transition: 0.2s;}
 #portfolio .pf .pf_btn a .hover_icon span {display: block; color: #fff; line-height: 40px;}
 #portfolio .pf .pf_btn a .hover_icon .icon_search {display: inline-block; margin-top: 10px; width: 20px; height: 20px; background-image: url("../img/icon_search2.png"); background-size: 100%;}
-#portfolio .pf .pf_btn .btn_detail {background-color: #8cb401;}
+#portfolio .pf .pf_btn .btn_detail {float: left;background-color: #8cb401;}
 #portfolio .pf .pf_btn .btn_detail:hover .hover_icon {margin-top: -40px; transition: 0.2s}
-#portfolio .pf .pf_btn .btn_site {background-color: #e8d537;}
+#portfolio .pf .pf_btn .btn_site {float: right;background-color: #e8d537;}
 #portfolio .pf .pf_btn .btn_site:hover .hover_icon {margin-top: -40px; transition: 0.2s}
 #portfolio .pf .pf_btn .btn_site .icon_new_window {display: inline-block; 	margin-top: 10px; width: 20px; height: 20px; background-image: url("../img/icon_new_window.png"); background-size: 100%;}
 #portfolio .pf_popup {display: none; position: fixed; overflow-y: scroll; z-index: 100; top: 0; bottom: 0; left: 0; right: 0; background-color: rgba(0,0,0,0.7);}
@@ -185,8 +185,8 @@ section .ctt_section {margin: 120px auto 0;}
 	section .ctt_section {margin: 80px auto 0;}
 	#about h2 {padding-top: 150px;}
 	#about .ctt_section {text-align: center;}
-	#about .ctt_section .info_profile {display: inline-block; float: none; width: auto;}
-	#about .ctt_section .info_history {display: inline-block; float: none; margin-top: 50px; width: auto}
+	#about .ctt_section .info_profile {display: inline-block; float: left; width: auto;}
+	#about .ctt_section .info_history {display: inline-block; float: left; margin-top: 50px; width: auto}
 	#about .ctt_section dl {text-align: left;}
 	#about .ctt_section dl dd {width: 210px;}
 	#skills {background-size: cover;}
