@@ -203,8 +203,8 @@ section .ctt_section {margin: 120px auto 0;}
 	#skills.on .ctt_section dl dd .skill_info {display: none;}
 	#portfolio .ctt_section {height: auto;}
 	#portfolio .ctt_section ul {height: auto;}
-	#portfolio .ctt_section ul li {float: none; width: 100%;}
-	#portfolio .ctt_section ul li+li {margin-top: 50px;}
+	#portfolio .ctt_section ul .pf-li {float: none; width: 100%;}
+	#portfolio .ctt_section ul .pf-li+.pf-li {margin-top: 50px;}
 	#portfolio .pf .pf_info {padding: 1%;}
 	#portfolio .pf .pf_btn .btn_detail {display: none;}
 	#portfolio .pf .pf_btn .btn_site {width: 100%;}
