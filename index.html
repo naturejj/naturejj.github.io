@@ -15,10 +15,283 @@
   <link href="https://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet">
 </head>
 <body>
-  <div class="wrap">
-    <header class="pf-header">헤더</header>
-    <div class="pf-container">컨테이터</div>
-    <footer class="pf-footer">푸터</footer>
+  <div id="wrap" class="no-scroll">
+    <header class="pf-header">
+      <a href="#" id="logo">
+        <h1>N</h1>
+      </a>
+      <button id="btnMenu">
+        <i></i>
+        <i></i>
+        <i></i>
+      </button>
+      <div class="menu">
+        <ul>
+          <li>
+            <a href="#about">ABOUT</a>
+          </li>
+          <li>
+            <a href="#skills">SKILL</a>
+          </li>
+          <li>
+            <a href="#portpofilo">PORTFOLIO</a>
+          </li>
+          <li>
+            <a href="#contact">CONTACT</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <div id="container">
+      <div id="control">
+        <ul class="nav">
+          <li>
+            <i></i>
+            <a href="#about">ABOUT</a>
+          </li>
+          <li>
+            <i></i>
+            <a href="#skills">SKILL</a>
+          </li>
+          <li>
+            <i></i>
+            <a href="#portpofilo">PORTFOLIO</a>
+          </li>
+          <li>
+            <i></i>
+            <a href="#contact">CONTACT</a>
+          </li>
+        </ul>
+        <i id="toTop"></i>
+      </div>
+      <div id="home">
+        <div class="video-container">
+          <div class="filter"></div>
+        </div>
+        <div class="title">
+		    	<p class="sec-title">JEONG JA YEON</p>
+		    	<p class="sub-title">FRONT-END DEVELOPER</p>
+		    </div>
+        <button id="btnScroll">
+		    	<span class="mouse">
+		    		<span class="wheel">
+		    			<i></i>
+			    		<i></i>
+		    		</span>
+		    	</span>
+		    </button>
+      </div>
+      <section id="about">
+        <div class="profile_image">
+          <img src="img/profile.jpg" alt="profile image">
+        </div>
+        <div class="inner">
+          <p class="sec-title">ABOUT</ph2>
+          <div class="ctt_section clearfix">
+            <div class="info_profile fll">
+              <p class="sub-title">PROFILE</p>
+              <dl class="clearfix">
+                <dt>이름</dt>
+                <dd>정자연</dd>
+                <dt>생년월일</dt>
+                <dd>1992.12.30</dd>
+                <dt>주소</dt>
+                <dd>서울시 광진구 광장동</dd>
+                <dt>연락처</dt>
+                <dd>010 2918 2460</dd>
+                <dt>이메일</dt>
+                <dd>natu11rej@gmail.com</dd>
+              </dl>
+            </div>
+            <div class="info_history fll">
+              <p class="sub-title">HISTORY</p>
+              <dl class="clearfix">
+                <dt>2017.11~2018.04</dt>
+                <dd>그린컴퓨터아트학원 웹퍼블리셔 <br>프론트엔드 개발자 교육 과정 이수</dd>
+                <dt>2015.11~2017.09</dt>
+                <dd>코아뱅크 C++, JAVA 개발자 근무</dd>
+                <dt>2015.01~2015.06</dt>
+                <dd>한국소프트웨어기술진흥협회(KOSTA) <br>JAVA,웹 개발자 교육 과정 이수</dd>
+                <dt>2011.03~2015.08</dt>
+                <dd>단국대학교 응용컴퓨터공학과 졸업</dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="skills">
+        <div class="inner">
+				  <h2>SKILLS</h2>
+          <div class="ctt_section">
+            <dl class="clearfix">
+              <dt>Photoshop/Illustrator</dt>
+              <dd>
+                <div class="skill_bar"></div>
+                <span class="skill_percent">40%</span>
+                <span class="skill_info">포토샵의 기본적인 기능을 다룰수 있습니다.</span>
+              </dd>
+              <dt>HTML5</dt>
+              <dd>
+                <div class="skill_bar"></div>
+                <span class="skill_percent">70%</span>
+                <span class="skill_info">웹접근성, 웹표준에 맞는 홈페이지를 만들 수 있습니다.</span>
+              </dd>
+              <dt>CSS3</dt>
+              <dd>
+                <div class="skill_bar"></div>
+                <span class="skill_percent">80%</span>
+                <span class="skill_info">스타일의 속성을 이해하고 있고, css만으로 반응형 홈페이지를 만들 수 있습니다.</span>
+              </dd>
+              <dt>JAVASCRIPT</dt>
+              <dd>
+                <div class="skill_bar"></div>
+                <span class="skill_percent">70%</span>
+                <span class="skill_info">스크립트에 대한 이해도가 높고 에러 메세지를 보고 오류를 해결할 수 있습니다.</span>
+              </dd>
+              <dt>JQUERY</dt>
+              <dd>
+                <div class="skill_bar"></div>
+                <span class="skill_percent">90%</span>
+                <span class="skill_info">오픈소스를 활용하여 사용할 수 있고, 간단한 효과는 직접 개발할 수 있습니다.</span>
+              </dd>
+              <dt>C/JAVA</dt>
+              <dd>
+                <div class="skill_bar"></div>
+                <span class="skill_percent">70%</span>
+                <span class="skill_info">백엔드 개발자로 1년 반동안 서버 프로그램을 개발한 경력이 있습니다. </span>
+              </dd>
+              <dt>SQL</dt>
+              <dd>
+                <div class="skill_bar"></div>
+                <span class="skill_percent">60%</span>
+                <span class="skill_info">게시판 등록/수정/삭제와 페이징 처리문을 작성할 수 있습니다.</span>
+              </dd>
+            </dl>
+          </div>
+        </div>
+      </section>
+      <section id="portfolio">
+        <div class="inner">
+          <h2>PORTFOLIO</h2>
+          <span class="caution">* 실제 사이트가 아니며 포트폴리오 용도로 제작한 페이지 입니다.</span>
+          <div class="ctt_section clearfix">
+            <ul>
+              <li class="fll">
+                <div id="pf1" class="pf">
+                  <div class="thumb">
+                    <img src="img/capture1.jpg" alt="포트폴리오1">
+                    <a href="javascript:;" class="thumb_more">
+                      <i class="icon_search"></i>
+                    </a>
+                  </div>
+                  <div class="pf_info">
+                    <span class="pf_tit">하나투어 홈페이지 카피</span>
+                    <span class="pf_about">HTML/CSS로만 구현한 하나투어 홈페이지 카피 사이트입니다.<br><br>HTML5 / CSS3</span>
+                    <div class="pf_btn clearfix">
+                      <a href="javascript:;" class="btn_detail fll">
+                        <div class="hover_icon">
+                          <span>DETAIL</span>
+                          <i class="icon_search"></i>	
+                        </div>
+                      </a>
+                      <a href="http://naturejj.dothome.co.kr/portfolio/hanatour/index.html" class="btn_site flr" target="_blank">
+                        <div class="hover_icon">
+                          <span>VIEW SITE</span>
+                          <i class="icon_new_window"></i>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="fll">
+                <div id="pf2" class="pf">
+                  <div class="thumb">
+                    <img src="img/capture2.jpg" alt="포트폴리오2">
+                    <a href="javascript:;" class="thumb_more">
+                      <i class="icon_search"></i>
+                    </a>
+                  </div>
+                  <div class="pf_info">
+                    <span class="pf_tit">스무디킹 홈페이지 리뉴얼</span>
+                    <span class="pf_about">연습용으로 만들어본 스무디킹 리뉴얼 사이트입니다. 모든 동작은 스크립트 없이 만들었으며, CSS3만으로 반응형 웹을 구현했습니다.<br><br>HTML5 / CSS3</span>
+                    <div class="pf_btn clearfix">
+                      <a href="javascript:;" class="btn_detail fll">
+                        <div class="hover_icon">
+                          <span>DETAIL</span>
+                          <i class="icon_search"></i>	
+                        </div>
+                      </a>
+                      <a href="http://naturejj.dothome.co.kr/portfolio/smoothieking/index.html" class="btn_site flr" target="_blank">
+                        <div class="hover_icon">
+                          <span>VIEW SITE</span>
+                          <i class="icon_new_window"></i>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="fll">
+                <div id="pf3" class="pf">
+                  <div class="thumb">
+                    <img src="img/capture3.jpg" alt="포트폴리오3">
+                    <a href="javascript:;" class="thumb_more">
+                      <i class="icon_search"></i>
+                    </a>
+                  </div>
+                  <div class="pf_info">
+                    <span class="pf_tit">개인 포트폴리오 사이트</span>
+                    <span class="pf_about">5개월간의 작업물을 정리한 개인 포트폴리오 사이트입니다.<br><br>HTML5 / CSS3 / javascript / jQuery</span>
+                    <div class="pf_btn clearfix">
+                      <a href="javascript:;" class="btn_detail fll">
+                        <div class="hover_icon">
+                          <span>DETAIL</span>
+                          <i class="icon_search"></i>	
+                        </div>
+                      </a>
+                      <a href="http://naturejj.dothome.co.kr" class="btn_site flr" target="_blank">
+                        <div class="hover_icon">
+                          <span>VIEW SITE</span>
+                          <i class="icon_new_window"></i>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="pf_popup">
+            <div class="pop">
+              <button id="subClose">
+                <i></i>
+                <i></i>
+              </button>
+              <div class="sub_load">
+                <!-- 스크립트에서 불러올 부분 -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact">
+        <div class="inner">
+          <h2>CONTACT</h2>
+          <div class="ctt_section">
+            <span>마지막까지 봐주셔서 감사합니다.<br>제 포트폴리오가 마음에 드신다면 아래 주소로 연락바랍니다.</span>
+            <a href="mailto:natu11rej@gmail.com" class="email">
+              <i class="icon_email"></i>
+              <span>natu11rej@gmail.com</span>
+            </a>
+          </div>
+          <div class="copyright">
+
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer></footer>
   </div>
 </body>
 </html>
