@@ -13,9 +13,220 @@ table {border-collapse: collapse;border-spacing: 0;}
 .ir {display: block; text-indent: -9999px;}
 ::selection {color: #fff; background-color: #e8d537;}
 
+.sec-title{font-size: 2.625em;}
+.sub-title{font-size: 1.313em;}
+button {border: 0; outline: 0; background-color: transparent; cursor: pointer;}
+
 /* layout */
+html {height: 100%}
+body {height: 100%;}
+#wrap {height: 100%; overflow-y: scroll;}
+#wrap.no_scroll {overflow: hidden;}
+.inner {position: relative;margin: 0 auto;padding: 0 60px;max-width: 1280px;height: 100%;}
+
+.dl>dt {float: left;clear: both;color: #777;line-height: 1.8em;font-size: 1em;}
+.dl>dd {float: left;color: #222;line-height: 1.8em;font-size: 1em;}
+
+/* header */
+#logo>h1{font-family: 'Lato';font-weight: 700;letter-spacing: 0;}
+/* container */
+#container {height: 100%;}
+#control { position: fixed; margin-top: -56px; top: 50%; left: 35px; z-index: 1;}
+#control .nav {display: none;}
+#control .nav li {float: left; clear: both; height: 16px; cursor: pointer;}
+#control .nav li+li {margin-top: 16px;}
+#control .nav li i {float: left; width: 14px; height: 14px; border-radius: 50%; background-color: #8cb401;}
+#control .nav li.active i {background-color: #125106;}
+#control .nav li span {float: left; overflow: hidden; margin-left: 10px; width: 0; color: #8cb401; white-space: nowrap; letter-spacing: 0;}
+#control .nav li:hover i {transform: scale(1.3); transition: 0.3s;}
+#control .nav li:hover span {width: 100px; transition: 0.3s;}
+#control #toTop {display: none; position: fixed; width: 40px; height: 40px; bottom: 15px; left: 50%; margin-left: -20px; background-size: 100%; background-image: url("../img/icon_totop.png"); border-radius: 50%; box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16); cursor: pointer;}
+#home {overflow: hidden; position: relative; height: 100%; background-image: url('../img/main.jpg'); background-color: #000;}
+#home .video-container .filter {position: absolute; z-index: 10; top: 0; bottom: 0; left: 0; right: 0; background: rgba(0, 0, 0, 0.3);}
+#home .title {position: absolute; top: 50%; left: 50%; z-index: 100; transform: translate(-50%, -50px); color: #fff; text-align: center; white-space: nowrap; text-shadow: 4px 4px 5px rgba(0,0,0,0.5);}
+#home .title h3 {margin-top: 8px;}
+#home #btnScroll {position: absolute; bottom: 50px; left: 50%; z-index: 100; transform: translate(-50%,0); text-align: center;}
+#home #btnScroll .mouse {display: block; position: relative; width: 36px; height: 50px; border-radius: 18px; border: 2px solid #fff;}
+#home #btnScroll .mouse .wheel {position: absolute; top: 5px; left: 11px;}
+#home #btnScroll .mouse .wheel i {position: absolute; top: 0px; left: 3px; width: 4px; height: 4px; border-radius: 50%; background-color: #fff;}
+#home #btnScroll .mouse .wheel i:nth-child(1) {animation: scroll_down 2s linear 0s infinite backwards;}
+#home #btnScroll .mouse .wheel i:nth-child(2) {animation: scroll_down 2s linear 1s infinite backwards;}
+section {}
+section .inner {padding-bottom: 100px;}
+section h2 {position: relative; padding-top: 100px; color: #125106; text-align: center;}
+section h2:after {content: ""; position: absolute; bottom: -20px; left: 50%; transform: translate(-50%,0);width: 50px; height: 3px; background-color: #125106;}
+section:nth-of-type(2n) {background-color: #f0f0f0;}
+section .ctt_section {margin: 120px auto 0;}
+#about {position: relative; min-height: calc(100% - 200px);}
+#about h2 {padding-top: 180px;}
+#about .profile_image {overflow: hidden; position: absolute; z-index: 10; top: -100px; left: 50%; transform: scale(0); transition: 0.3s 0.1s cubic-bezier(0.21, 0.62, 0.78, 1.54); margin-left: -100px; width: 200px; height: 200px; border-radius: 50%; background-color: #e8d537;}
+#about .profile_image img {display: block; width: 100%; height: 100%;}
+#about .ctt_section {max-width: 1000px; width: 100%;}
+#about .ctt_section h3 {color: #8cb401;}
+#about .ctt_section dl {margin-top: 30px;}
+#about .ctt_section dl dt {margin-top: 12px; width: 150px;}
+#about .ctt_section dl dd {float: left; margin-top: 12px;}
+#about .ctt_section .info_profile {width: 50%;}
+#about .ctt_section .info_history {width: 50%;}
+#skills {background: url('../img/skills_bg.jpg'); background-position: 50% 30%;}
+#skills h2 {color: #fff;}
+#skills h2:after {background-color: #fff;}
+#skills .ctt_section {max-width: 1000px; width: 100%; text-align: center;}
+#skills .ctt_section dl {display: inline-block;}
+#skills .ctt_section dl dt {margin-right: 50px; width: 200px; height: 3.6em; color: #fff; font-size: 1em; text-align: right; letter-spacing: 0; }
+#skills .ctt_section dl dd {width: 500px; text-align: left;}
+#skills .ctt_section dl dd span {color: #fff; font-size: 0.813em;}
+#skills .ctt_section dl dd .skill_bar {display: inline-block; width: 0%; height: 0.6em; background-color: #e8d537; transition: width 0.6s;}
+#skills.on .ctt_section dl dd:nth-of-type(1) .skill_bar {width: 40%;}
+#skills.on .ctt_section dl dd:nth-of-type(2) .skill_bar {width: 70%;}
+#skills.on .ctt_section dl dd:nth-of-type(3) .skill_bar {width: 80%;}
+#skills.on .ctt_section dl dd:nth-of-type(4) .skill_bar {width: 70%;}
+#skills.on .ctt_section dl dd:nth-of-type(5) .skill_bar {width: 90%;}
+#skills.on .ctt_section dl dd:nth-of-type(6) .skill_bar {width: 70%;}
+#skills.on .ctt_section dl dd:nth-of-type(7) .skill_bar {width: 60%;}
+#skills .ctt_section dl dd .skill_percent {opacity: 0; letter-spacing: 0; transition: opacity 0.6s 0.6s;}
+#skills.on .ctt_section dl dd .skill_percent {opacity: 1;}
+#skills .ctt_section dl dd .skill_info {overflow: hidden; display: block; width: 0%; font-weight: 100; white-space: nowrap; opacity: 0.8;}
+#skills.on .ctt_section dl dd .skill_info {width: 100%; transition: width 1.2s;}
+#portfolio {}
+#portfolio .caution {margin-top: 60px; display: block; color: #8cb401; text-align: center;}
+#portfolio .ctt_section {overflow: hidden; height: 600px;}
+#portfolio .ctt_section ul {width: 100%; height: 600px;}
+#portfolio .ctt_section ul li {padding: 0 1.6%; width: 33.33%;}
+#portfolio .ctt_section ul li .pf {margin-top: 200px; opacity: 0;}
+#portfolio.on .ctt_section ul li .pf {margin-top: 0; opacity: 1; transition: opacity 0.8s, margin-top 0.8s;}
+#portfolio .ctt_section ul li #pf1 {transition: opacity 0.8s 0s, margin-top 0.8s 0s;}
+#portfolio .ctt_section ul li #pf2 {transition: opacity 0.8s 0.1s, margin-top 0.8s 0.1s;}
+#portfolio .ctt_section ul li #pf3 {transition: opacity 0.8s 0.2s, margin-top 0.8s 0.2s;}
+#portfolio .pf .thumb {overflow: hidden; position: relative; width: 100%; height: 0; padding-top: 75%; background-color: #f0f0f0;}
+#portfolio .pf .thumb img {position: absolute; top: 0; bottom: 0; left: 0; right: 0; width: 100%;}
+#portfolio .pf .thumb .thumb_more {display: none; position: absolute; top: 0; bottom: 0; left: 0; right: 0; background-color: rgba(0,0,0,0.5);}
+#portfolio .pf .thumb:hover .thumb_more {display: block;}
+#portfolio .pf .thumb .thumb_more i {position: absolute; top: 50%; left: 50%; margin-left: -30px; margin-top: -30px; width: 60px; height: 60px; background-image: url("../img/icon_search.png");}
+#portfolio .pf .pf_info {padding: 5%; min-height: 270px;}
+#portfolio .pf .pf_info span {display: block;}
+#portfolio .pf .pf_info .pf_tit {position: relative; margin-bottom: 50px; color: #222; font-size: 1.125em;}
+#portfolio .pf .pf_info .pf_tit:after {content: ""; position: absolute; top: 40px; left: 0; width: 25px; height: 1px; background-color: #000;}
+#portfolio .pf .pf_info .pf_about {min-height: 170px; color: #777; font-size: 1em; line-height: 1.6em;}
+#portfolio .pf .pf_btn {margin-top: 20px;}
+#portfolio .pf .pf_btn a {width: 48%; height: 40px; text-align: center;}
+#portfolio .pf .pf_btn a .hover_icon {width: 100%; height: 40px; transition: 0.2s;}
+#portfolio .pf .pf_btn a .hover_icon span {display: block; color: #fff; line-height: 40px;}
+#portfolio .pf .pf_btn a .hover_icon .icon_search {display: inline-block; margin-top: 10px; width: 20px; height: 20px; background-image: url("../img/icon_search2.png"); background-size: 100%;}
+#portfolio .pf .pf_btn .btn_detail {background-color: #8cb401;}
+#portfolio .pf .pf_btn .btn_detail:hover .hover_icon {margin-top: -40px; transition: 0.2s}
+#portfolio .pf .pf_btn .btn_site {background-color: #e8d537;}
+#portfolio .pf .pf_btn .btn_site:hover .hover_icon {margin-top: -40px; transition: 0.2s}
+#portfolio .pf .pf_btn .btn_site .icon_new_window {display: inline-block; 	margin-top: 10px; width: 20px; height: 20px; background-image: url("../img/icon_new_window.png"); background-size: 100%;}
+#portfolio .pf_popup {display: none; position: fixed; overflow-y: scroll; z-index: 100; top: 0; bottom: 0; left: 0; right: 0; background-color: rgba(0,0,0,0.7);}
+#portfolio .pf_popup .pop {margin: 50px auto; padding: 0 50px; max-width: 1100px; width: 100%;}
+#portfolio .pf_popup .pop #subClose {position: fixed; top: 10px; left: 10px; width: 30px; height: 30px;}
+#portfolio .pf_popup .pop #subClose i {position: absolute; top: 15px; left: 0; width: 30px; height: 1px; background-color: #fff;}
+#portfolio .pf_popup .pop #subClose i:nth-child(1) {transform: rotate(45deg);}
+#portfolio .pf_popup .pop #subClose i:nth-child(2) {transform: rotate(-45deg);}
+#portfolio .pf_popup .pop .sub_ctt {padding: 40px; width: 100%; background-color: #fff;}
+#portfolio .pf_popup .pop .sub_ctt .sub_tit {position: relative; display: block; margin: 40px 0; font-size: 1.875em; text-align: center;}
+#portfolio .pf_popup .pop .sub_ctt .sub_tit:after {content: ""; position: absolute; bottom: -20px; left: 50%; transform: translate(-50%,0);width: 50px; height: 3px; background-color: #125106;}
+#portfolio .pf_popup .pop .sub_ctt .sub_left {padding: 10px; width: 49%;}
+#portfolio .pf_popup .pop .sub_ctt .sub_left span {font-size: 1em; line-height: 1.8em;}
+#portfolio .pf_popup .pop .sub_ctt .sub_right {margin-left: 2%; padding: 10px; width: 49%;}
+#portfolio .pf_popup .pop .sub_ctt .sub_right dl {}
+#portfolio .pf_popup .pop .sub_ctt .sub_right dl dt {width: 100px;}
+#portfolio .pf_popup .pop .sub_ctt .sub_right dl dd span i {display: inline-block; margin: 1px 2px; width: 15px; height: 15px; vertical-align: -3px;}
+#portfolio .pf_popup .pop .sub_ctt .sub_view {margin: 20px 0;}
+#portfolio .pf_popup .pop .sub_ctt .sub_view a {display: block; margin: auto; text-align: center; width: 170px; height: 50px; border: 1px solid #125106; line-height: 50px;}
+#portfolio .pf_popup .pop .sub_ctt .sub_view a:hover {color: #fff; background-color: #125106; transition: 0.2s;}
+#portfolio .pf_popup .pop .sub_ctt .sub_image {clear: both; position: relative; margin-top: 40px; width: 100%; height: 0; background-color: #f0f0f0;}
+#portfolio .pf_popup .pop .sub_ctt1 .sub_image {padding-top: 171%;}
+#portfolio .pf_popup .pop .sub_ctt2 .sub_image {padding-top: 153%;}
+#portfolio .pf_popup .pop .sub_ctt3 .sub_image {padding-top: 225%;}
+#portfolio .pf_popup .pop .sub_ctt .sub_image img {position: absolute; top: 0; left: 0; display: block; width: 100%;}
+#contact {position: relative; height: 100%; text-align: center; background-image: url("../img/contact_bg.jpg"); background-size: cover; background-position: 50% 100%;}
+#contact .ctt_section {}
+#contact .ctt_section span {display: block; color: #222;line-height: 1.6em;}
+#contact .ctt_section .email {display: inline-block; margin-top: 170px;}
+#contact .ctt_section .email:hover span {text-decoration: underline;}
+#contact .ctt_section .email .icon_email {display: inline-block; margin-bottom: 10px; width: 50px; height: 34px; background-image: url('../img/icon_email.png'); background-position: 0 0;}
+#contact .copyright {position: absolute; bottom: 0; left: 0; right: 0; text-align: center; height: 50px;}
 
 
-/*  */
-/*  */
-/*  */
+/* animation */
+@keyframes scroll_down {
+	0% {margin-top: 0; opacity: 0;}
+	50% {margin-top: 9px; opacity: 1;}
+	100% {margin-top: 18px; opacity: 0;}
+}
+
+
+/* media query */
+
+@media screen and (max-width: 1024px) { /* large-size */
+	html {font-size: 15px;}
+	#skills .ctt_section dl dt {margin-right: 40px; width: 180px;}
+	#skills .ctt_section dl dd {width: 400px;}
+}
+
+
+@media screen and (max-width: 768px) { /* medium-size */
+	html {font-size: 14px;}
+	.inner {padding: 0 20px;}
+	#wrap {position: relative;}
+	header {position: absolute; width: 100%; height: 60px;}
+	header #logo {position: absolute; top: 12px; left: 15px;}
+	header #btnMenu {position: fixed; z-index: 100; top: 15px; width: 40px; height: 30px; border-radius: 5px;}
+	header #btnMenu i {position: absolute; width: 30px; height: 3px; border-radius: 1px; background-color: #e8d537; transition: top 0.2s 0.2s, transform 0.2s;}
+	header #btnMenu i:nth-child(1) {top: 5px; left: 5px;}
+	header #btnMenu i:nth-child(2) {top: 13px; left: 5px;}
+	header #btnMenu i:nth-child(3) {top: 21px; left: 5px;}
+	header #btnMenu.active i {transition: top 0.2s, transform 0.2s 0.2s;}
+	header #btnMenu.active i:nth-child(1) {top: 13px; transform: rotate(40deg);}
+	header #btnMenu.active i:nth-child(2) {top: 13px; opacity: 0;}
+	header #btnMenu.active i:nth-child(3) {top: 13px; transform: rotate(-40deg);}
+	section .ctt_section {margin: 80px auto 0;}
+	#about h2 {padding-top: 150px;}
+	#about .ctt_section {text-align: center;}
+	#about .ctt_section .info_profile {display: inline-block; float: none; width: auto;}
+	#about .ctt_section .info_history {display: inline-block; float: none; margin-top: 50px; width: auto}
+	#about .ctt_section dl {text-align: left;}
+	#about .ctt_section dl dd {width: 210px;}
+	#skills {background-size: cover;}
+	#skills .ctt_section dl {display: block;}
+	#skills .ctt_section dl dd {width: calc(100% - 220px);}
+	#skills .ctt_section dl dd .skill_bar {height: 0.8em;}
+	#skills.on .ctt_section dl dd .skill_info {display: none;}
+	#portfolio .ctt_section {height: auto;}
+	#portfolio .ctt_section ul {height: auto;}
+	#portfolio .ctt_section ul li {float: none; width: 100%;}
+	#portfolio .ctt_section ul li+li {margin-top: 50px;}
+	#portfolio .pf .pf_info {padding: 1%;}
+	#portfolio .pf .pf_btn .btn_detail {display: none;}
+	#portfolio .pf .pf_btn .btn_site {width: 100%;}
+	#portfolio .pf .pf_info {margin-top: 40px; min-height: 0;}
+	#portfolio .pf .pf_info .pf_about {min-height: 0;}
+	#portfolio .pf_popup .pop {margin: 0; padding: 0;}
+	#portfolio .pf_popup .pop .sub_ctt .sub_left {width: 100%;}
+	#portfolio .pf_popup .pop .sub_ctt .sub_right {width: 100%;}
+	#portfolio .pf .pf_btn a .hover_icon span {display: inline-block;}
+	#portfolio .pf .pf_btn .btn_site .icon_new_window {margin-top: 0; margin-left: 4px; width: 15px; height: 15px;}
+	#portfolio .pf .pf_btn .btn_site:hover .hover_icon {margin-top: 0;}
+	#portfolio .pf_popup .pop .sub_ctt {padding: 20px;}
+	#portfolio .pf_popup .pop #subClose {z-index: 10; top: 0; left: auto; right: 20px; background-color: #125106;}
+	#contact .ctt_section .email {position: absolute; top: 50%; left: 50%; margin-top: 50px;transform: translate(-50%,-50%);}
+}
+
+@media screen and (max-width: 480px) { /* small-size */
+	html {min-width: 320px; font-size: 13px;}
+	#about h2 {padding-top: 120px;}
+	#about .inner {padding: 0 10px 100px;}
+	#about .profile_image {width: 150px; height: 150px; top: -75px; margin-left: -75px;}
+	#about .ctt_section dl dt {width: 100px;}
+	#about .ctt_section dl dd {width: 200px;}
+	#skills {background-position: 70% 30%;}
+	#skills .ctt_section dl dt {width: 100%; text-align: left; height: 1.5em; line-height: 1.5em;}
+	#skills .ctt_section dl dt~dt {margin-top: 20px;}
+	#skills .ctt_section dl dd {width: 100%;}
+	#skills .ctt_section dl dd .skill_bar {height: 1em;}
+	#portfolio .pf_popup .pop {margin: 0; padding: 0;}
+	#portfolio .pf_popup .pop .sub_ctt .sub_left {width: 100%;}
+	#portfolio .pf_popup .pop .sub_ctt .sub_right {width: 100%;}
+}
